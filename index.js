@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 //  shebang 指令
 
-const program = require("commander");
+const { program } = require("commander");
 
 const helpOptions = require("./lib/core/help");
 const createCommanders = require("./lib/core/create");
@@ -19,5 +19,3 @@ createCommanders();
 program.parse(process.argv);
 
 const options = program.opts();
-
-if (options.dest) console.log(options.dest);
